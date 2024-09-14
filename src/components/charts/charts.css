@@ -1,0 +1,80 @@
+.sun-chart-container {
+    position: relative;
+    width: 200px;
+    /* margin-top: -50px; */
+    height: 200px;
+    /* background-color: #333; */
+    border-radius: 15px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.sun-chart {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    margin-top: -100px;
+}
+
+.arc {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-top: 2px dashed #ffaa00;
+    border-radius: 100px 100px 0 0;
+    background: linear-gradient(to right,
+            rgba(255, 170, 0, 0.2) 0%,
+            /* Start with the light color */
+            rgba(255, 170, 0, 0.2) 0%,
+            /* This value will be updated dynamically */
+            transparent 0%,
+            /* End with transparency */
+            transparent 100%);
+    transform: rotate(360deg);
+}
+
+
+.sun {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ffaa00;
+    border-radius: 50%;
+    top: -10px;
+    /* Half of the sun's height to center it on the arc */
+}
+
+.time-labels {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.time-labels .sunrise,
+.time-labels .sunset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time-labels img {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 5px;
+}
+
+.time-labels .time {
+    color: #fff;
+    font-size: 14px;
+    margin-top: -10px;
+}
+
+.time-labels p{
+    color: #fcb72f;
+    margin-top: -5px;
+}

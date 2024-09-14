@@ -1,0 +1,260 @@
+/* ------- Scrollbar Styling --------- */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #121212;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #555, #333);
+  border-radius: 10px;
+  border: 4px solid #121212;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #777, #555);
+}
+
+.App {
+  display: flex;
+  gap: 2rem;
+  margin: 1rem 1rem 0.8rem;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+
+.background {
+  position: absolute;
+  width: 300.95px;
+  height: 200.05px;
+  left: calc(86.7vw * 3.5 / 10 - 372.95px / 2);
+  top: calc(50% - 257.05px / 2 - 20vh);
+  /* Adjusted to properly align with the upper section */
+  border-radius: 100%;
+  background: linear-gradient(118.19deg, #1fa2ff -3.62%, #12d8fa 50.44%, #a6ffcb 104.51%);
+  opacity: 0.2;
+  filter: blur(34px);
+  transform: matrix(1, 0, -0.03, 1, 0, 0);
+}
+
+.background3{
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  left: calc(165vw * 3.5 / 10 - 372.95px / 2);
+  top: calc(85% - 257.05px / 2 - 20vh);
+  /* Adjusted to properly align with the upper section */
+  border-radius: 100%;
+  background: linear-gradient(118.19deg, #1fa2ff -3.62%, #12d8fa 50.44%, #a6ffcb 104.51%);
+  opacity: 0.2;
+  filter: blur(34px);
+  transform: matrix(1, 0, -0.03, 1, 0, 0);
+}
+
+
+/* ----------- Logo Section ----------- */
+@keyframes shine-grey {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 50% 100%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.app-logo {
+  /* background-color: #242F34; */
+  background: linear-gradient(145deg, #242F34, #374146, #3b4e57, #263035, #2d3e48);
+  border-radius: 8px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3),
+    inset 0 0 20px rgba(0, 0, 0, 0.2),
+    inset 0 0 30px rgba(0, 0, 0, 0.1),
+    0 0 15px rgba(0, 0, 0, 0.4);
+  background-size: 500% 500%;
+  animation: shine-grey 5s linear infinite;
+  padding: 5px 10px;
+  text-align: center;
+}
+
+.app-logo .logo img {
+  height: 10vh;
+  width: 4rem;
+  border-radius: 50%;
+}
+
+.app-logo .logo .weather-app-name {
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.app-logo .logo .weather-app-name-x {
+  font-weight: bolder;
+  font-size: 22px;
+  color: #ffc62d;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: oblique;
+}
+
+/* ------------- Upper Main Section ------------ */
+
+.main .main-upper {
+  display: flex;
+  width: 86.7vw;
+  gap: 50px;
+  height: 40vh;
+}
+
+.main .main-upper .main-upper-left {
+  width: 33%;
+  background-color: #191b1f;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.main .main-upper .main-upper-right {
+  height: 200%;
+  width: 65%;
+  background-color: #191b1f;
+  border-radius: 20px;
+  /* margin: 0 10px; */
+  margin-top: 5%;
+  padding: 0 10px;
+}
+
+/* Lower Main Section */
+
+.main .main-lower {
+  height: 40vh;
+  display: flex;
+  width: 86.7vw;
+  gap: 50px;
+}
+
+.main .main-lower .main-lower-left {
+  /* flex: 3.5; */
+  background-color: #191b1f;
+  border-radius: 20px;
+  width: 34%;
+  height: 115%;
+  margin-top: -40px;
+  overflow-y: scroll;
+}
+
+.main .main-lower .main-lower-left .background {
+  top: calc(50% - 257.05px / 2 + 30vh);
+}
+
+/* main left upper div */
+
+.main .main-upper .main-upper-left .background {
+  top: calc(-10% - 257.05px / 2 + 30vh);
+  left: calc(60.7vw * 3.5 / 10 - 372.95px / 2);
+}
+
+.main-upper-searchbar {
+  margin: -1rem 40rem;
+  position: absolute;
+  /* display: flex; */
+  /* justify-content: flex-end; */
+  display: flex;
+}
+
+.main-upper-searchbar input{
+  padding: 5px 15px;
+  border-radius: 10px;
+  font-size: 17px;
+  background-color: #343639;
+  border: none;
+  outline: none;
+  color: white;
+  margin-right: 10px;
+}
+
+.main-upper-searchbar .search-icon {
+  background-color: black;
+  padding: 0.7rem;
+  border-radius: 50%;
+  font-size: larger;
+  cursor: pointer;
+}
+
+.main-upper-left-info {
+  margin-left: 1.5rem;
+  padding-bottom: 10px;
+  border-bottom: 0.5px solid black;
+  margin-top: 3rem;
+}
+
+.main .main-upper .main-upper-left .main-upper-left-info .weather-icon {
+  height: 100px;
+  width: 100px;
+  margin-top: -10%;
+}
+
+.main .main-upper .main-upper-left .main-upper-left-info h2 {
+  margin: 5px 0;
+}
+
+.main .main-upper .main-upper-left .main-upper-left-info p {
+  margin: 0 0;
+}
+
+.main .main-upper .main-upper-left .main-upper-left-timeline {
+  padding-left: 20px;
+  font-size: 22px;
+  display: flex;
+  gap: 6rem;
+}
+
+.main .main-upper .main-upper-left .main-upper-left-timeline .place {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.main .main-upper .main-upper-left .main-upper-left-timeline .time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.main .main-upper .main-upper-left .cloud-background {
+  font-size: 70px;
+  color: grey;
+  margin-left: 86%;
+  filter: blur(1px);
+  margin-top: 20%;
+  position: absolute;
+  overflow: hidden;
+}
+
+/* ---------- Main right upper div --------- */
+
+.main .main-upper .main-upper-right{
+  display: flex;
+}
+
+.main .main-upper .main-upper-right .highlights{
+  display: flex;
+  margin-top: 60px;
+  gap: 20px;
+}
